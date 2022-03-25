@@ -10,7 +10,7 @@ RUN apk --no-cache add make git gcc libc-dev curl && make build
 # -----------------------------------------------------------------------------
 # Build Image...
 
-FROM alpine:3.10.0
+FROM alpine:3.13.8
 
 COPY --from=build /k9s/execs/k9s /bin/k9s
 ENV KUBE_LATEST_VERSION="v1.18.1"
